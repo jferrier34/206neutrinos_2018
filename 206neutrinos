@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+import sys
+from math import *
+
+def help():
+    print("USAGE\n\t./206neutrinos n a h sd\n")
+    print("DESCRIPTION\n\tn\tnumber of values")
+    print("\ta\tarithmetic mean")
+    print("\th\tharmonic mean")
+    print("\tsd\tstandard deviation")
+    exit(0)
+
+def check_error():
+    if (sys.argv[1] == "-h"):
+        help()
+
+def main():
+    if (len(sys.argv) < 2):
+        exit(84)
+    check_error()
+    #do_all()
+
+if __name__ == '__main__':
+    main()
