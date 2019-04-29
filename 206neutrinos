@@ -8,9 +8,8 @@ from math import sqrt
 
 
 
-def neutrinos(n, a, h, sd):
+def neutrinos(n, a, h, sd, arg):
     print("Enter next value: ", end='')
-    arg = input()
 
     s = n * a
     sc = (sd**2 + a**2) * n
@@ -21,8 +20,6 @@ def neutrinos(n, a, h, sd):
     h = n / (1 / arg + (n - 1) / h)
     sd = sqrt((sc + arg**2) / n - a**2)
     print_result(n, sd, a, q, h)
-    neutrinos(n, a, h, sd)
-    pass
 
 def print_result(n, sd, a, q, h):
     print("\tNumber of values:\t%d" % n)
@@ -42,13 +39,13 @@ def do_all():
         user = input()
         if (user == "END"):
             exit(0)
-        if (len(sys.argv) == 5):
-            neutrinos(n, a, h, sd)
         try:
             tmp = float(user)
         except:
             print("only number")
             exit(84)
+        neutrinos(n, a, h, sd, tmp)
+        
         
 
 def help():
