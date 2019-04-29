@@ -1,15 +1,8 @@
 #!/usr/bin/python3
 import sys
 from math import *
-from sys import argv
-from math import sqrt
-
-
-
-
 
 def neutrinos(n, a, h, sd, arg):
-    print("Enter next value: ", end='')
 
     s = n * a
     sc = (sd**2 + a**2) * n
@@ -26,7 +19,7 @@ def print_result(n, sd, a, q, h):
     print("\tStandard deviation:\t%.2f" % sd)
     print("\tArithmetic mean:\t%.2f" % a)
     print("\tRoot mean square:\t%.2f" % q)
-    print("\tHarmonic mean:\t%.2f\n" % h)
+    print("\tHarmonic mean:\t\t%.2f\n" % h)
 
 def do_all():
     n = float(sys.argv[1])
@@ -35,7 +28,7 @@ def do_all():
     sd = float(sys.argv[4])
     tmp = 0.0
     while(1):
-        print("Enter next value: ")
+        print("Enter next value: ", end='')
         user = input()
         if (user == "END"):
             exit(0)
