@@ -13,6 +13,7 @@ def neutrinos(n, a, h, sd, arg):
     h = n / (1 / arg + (n - 1) / h)
     sd = sqrt((sc + arg**2) / n - a**2)
     print_result(n, sd, a, q, h)
+    return n, a, h, sd
 
 def print_result(n, sd, a, q, h):
     print("\tNumber of values:\t%d" % n)
@@ -37,7 +38,7 @@ def do_all():
         except:
             print("only number")
             exit(84)
-        neutrinos(n, a, h, sd, tmp)
+        n, a,h ,sd  = neutrinos(n, a, h, sd, tmp)
         
         
 
