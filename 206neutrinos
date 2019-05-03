@@ -62,7 +62,7 @@ def check_error():
         sd = float(sys.argv[4])
     except:
         exit(84)
-    if (n < 0 or a < 0 or h < 0 or sd < 0):
+    if (n < 0 or a < 0 or h <= 0 or sd < 0):
         exit(84)
 
 def main():
